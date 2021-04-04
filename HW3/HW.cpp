@@ -18,6 +18,7 @@ int main()
     //3
     int arr[3][3][3] = {0};
     int* ptr = &arr[1][1][1];
+    std::cout << *ptr << " ";
     *ptr = 3;
     std::cout << *ptr << " " << arr[1][1][1];
     return 0;
