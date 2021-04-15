@@ -3,7 +3,16 @@
 #include <fstream>
 
 using namespace std;
+void coutDelArr(int * ptrArr, size_t size)
+{
+    for(int i = 0; i < size; i++)
+    {
+        cout << ptrArr[i] << " ";
+    }
+    cout << endl;
 
+    delete[] ptrArr;
+}
 void task1()
 {
     while (true)
@@ -28,15 +37,7 @@ void task1()
                 ptrArr[i] = pow;
             }
 
-            for(int i = 0; i < size; i++)
-            {
-                cout << ptrArr[i] << " ";
-            }
-            cout << endl;
-
-            delete[] ptrArr;
-
-            return;
+            coutDelArr(ptrArr,size);
         }
     }
     
