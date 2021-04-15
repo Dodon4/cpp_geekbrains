@@ -43,7 +43,7 @@ void task3(int *arr, size_t size)
     for(size_t i = 0; i < size; i++)
     {
         arr[i] = a;
-         a += 3;
+        a += 3;
     }
     for(size_t i = 0; i < size; i++)
     {
@@ -92,7 +92,6 @@ void task4(int *arr, int n, size_t size)
     }
     cout << endl;
 }
-// 444444444444444444444
 
 void task5(int *arr, size_t size)
 {
