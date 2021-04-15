@@ -3,7 +3,7 @@
 #include <fstream>
 
 using namespace std;
-void coutDelArr(int * ptrArr, size_t size)
+void coutDelArr(int *& ptrArr, size_t &size)
 {
     for(int i = 0; i < size; i++)
     {
@@ -12,6 +12,15 @@ void coutDelArr(int * ptrArr, size_t size)
     cout << endl;
 
     delete[] ptrArr;
+}
+void createArr(int *& ptrArr, size_t &size)
+{
+    ptrArr = new int [size];
+
+    for(size_t i = 0, pow = 1; i < size; i++, pow *= 2)
+    {
+        ptrArr[i] = pow;
+    }
 }
 void task1()
 {
@@ -30,19 +39,16 @@ void task1()
         }
         else
         {
-            int * ptrArr = new int [size];
+            int * ptrArr;
 
-            for(size_t i = 0, pow = 1; i < size; i++, pow *= 2)
-            {
-                ptrArr[i] = pow;
-            }
-
+            createArr(ptrArr,size);
             coutDelArr(ptrArr,size);
+            return;
         }
     }
     
 }
-void coutDelArr(int ** ptrArr, size_t size)
+void coutDelArr(int **& ptrArr, size_t size)
 {
     for(size_t i = 0; i < size; i++)
     {
