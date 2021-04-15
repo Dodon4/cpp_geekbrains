@@ -41,7 +41,19 @@ void task1()
     }
     
 }
-
+void coutDelArr(int ** ptrArr, size_t size)
+{
+    for(size_t i = 0; i < size; i++)
+    {
+        for(size_t j = 0; j < size; j++)
+        {
+            cout << ptrArr[i][j] << " ";
+        }
+        delete[] ptrArr[i];
+        cout << endl;
+    }
+    delete[] ptrArr;
+}
 void task2()
 {
 
@@ -56,16 +68,7 @@ void task2()
             ptrArr[i][j] = rand() % 10;
         }
     }
-    for(size_t i = 0; i < size; i++)
-    {
-        for(size_t j = 0; j < size; j++)
-        {
-            cout << ptrArr[i][j] << " ";
-        }
-        delete[] ptrArr[i];
-        cout << endl;
-    }
-    delete[] ptrArr;
+    coutDelArr(ptrArr,size);
 
         
 }  
