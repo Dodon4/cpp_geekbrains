@@ -102,7 +102,7 @@ void GameField::MoveObjects()
 void GameField::GetTickCount()
 {
     system("cls");
-
+    this->MoveObjects();
     this->DrawFrame();
     
 }
