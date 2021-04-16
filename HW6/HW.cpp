@@ -197,6 +197,13 @@ int main()
     task3_2(f2);
    
     cout <<"//////////////////task4///////////////////" << endl;
+    cout << "Enter name of file 1:" << endl;
+    cin >> f1;
+    f1 += ".txt";
+
+    cout << "Enter name of file 2:" << endl;
+    cin >> f2;
+    f2 += ".txt";
     task4(f1, f2);
 
     cout <<"//////////////////task5///////////////////" << endl;
