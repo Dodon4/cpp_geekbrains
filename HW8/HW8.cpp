@@ -1,23 +1,19 @@
-
 #include "GameFunc.h"
-//using namespace std;
 
-extern size_t size;
-extern bool GameIsOver;
+extern std::string gameOverText;
 
 int main()
 {
-    Cell** CellsField = new Cell * [size];
-    Setup(CellsField);
-    while (true)//!GameIsOver)
+
+
+    Setup();
+    while (!Draw())
     {
-        Draw(CellsField);
-        input(CellsField);
-        //system("cls");
+        Turn();
+
     }
-    for (size_t i = 0; i < size; i++)
-    {
-        delete[] CellsField[i];
-    }
+    std::cout << gameOverText << std::endl;
+    delArr();
+
     return 0;
 }
