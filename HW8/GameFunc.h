@@ -4,11 +4,17 @@
 #include <random>
 #include <string>
 enum class OXField { O, X, Empty };
+
+#pragma pack(push, 1)
 struct Cell
 {
     OXField cell = OXField::Empty;
     unsigned int isFlaged : 1;
 };
+#pragma pack(pop)
+
+
+#pragma pack(push, 1)
 struct GameField
 {
     size_t size;
@@ -19,6 +25,7 @@ struct GameField
     bool GameIsOver = false;
     Cell** pArr;
 };
+#pragma pack(pop)
 
 int32_t getRandomNum(int32_t min, int32_t max);
 
