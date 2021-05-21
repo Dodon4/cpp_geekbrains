@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "xlocale": "cpp",
+        "xstring": "cpp",
+        "system_error": "cpp",
+        "type_traits": "cpp",
+        "xlocnum": "cpp",
+        "xtr1common": "cpp",
+        "initializer_list": "cpp",
+        "random": "cpp",
+        "vector": "cpp",
+        "xutility": "cpp"
+    }
+}
