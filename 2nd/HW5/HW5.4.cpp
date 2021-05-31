@@ -101,7 +101,7 @@ protected:
 
 class GenericPlayer : public Hand
 {
-private:
+protected:
     const string _name;
 
 public:
