@@ -24,7 +24,6 @@ int main()
     vector<double> s(100);
     double i = 0;
     generate(s.begin(), s.end(), [&]() {i += 0.1; return rand() % 10 * sin(i); });
-    //transform(s.begin(), s.end(), s.begin(), [](const auto i) { return sin(i); });
     copy(s.begin(), s.end(), ostream_iterator<double>{cout, ", "});
     cout << endl;
     vector<double> vecInt(100);
