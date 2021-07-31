@@ -22,7 +22,6 @@ using namespace std;
         {
             ifstream in("Group.bin", ios_base::binary);
             _group.ParseFromIstream(&in);
-            cout << _group.mutable_group(0)->DebugString();
         }
         void Save() override
         {
